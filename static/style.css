@@ -1,8 +1,13 @@
+@font-face {
+    font-family: mainfont;
+    src: url(../static/fonts/ttf/Vazirmatn-Bold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Vazirmatn', sans-serif;
+    font-family: 'mainfont', sans-serif;
 }
 
 body {
