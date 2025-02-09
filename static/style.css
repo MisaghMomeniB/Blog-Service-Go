@@ -47,3 +47,10 @@ body {
 .nav-links a:hover {
     color: #ff6f61;
 }
+
+/* Home Section */
+.home-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #181818;
+}
