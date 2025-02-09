@@ -3,7 +3,7 @@ package handler
 import (
 	"encoding/json"
     "net/http"
-    "blog-service-go/pkg/model" // Import the model package
+    "Blog-Service-Go/pkg/model" // Import the model package
 )
 
 func UsersHandler(w http.ResponseWriter, r *http.Request) {
