@@ -12,3 +12,9 @@ import (
 var posts = []model.Post{
     {ID: 1, Title: "First Post", Content: "This is the first blog post.", CreatedAt: time.Now()},
 }
+
+// PostsHandler handles fetching all blog posts
+func PostsHandler(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Content-Type", "application/json")
+    json.NewEncoder(w).Encode(posts)
+}
