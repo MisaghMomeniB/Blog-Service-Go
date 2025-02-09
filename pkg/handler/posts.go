@@ -25,3 +25,10 @@ func CreatePostHandler(w http.ResponseWriter, r *http.Request) {
         http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
         return
     }
+
+	var newPost model.Post
+    err := json.NewDecoder(r.Body).Decode(&newPost)
+    if err != nil {
+        http.Error(w, "Unable to parse request body", http.StatusBadRequest)
+        return
+    }
