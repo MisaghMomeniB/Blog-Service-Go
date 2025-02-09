@@ -32,3 +32,14 @@ func CreatePostHandler(w http.ResponseWriter, r *http.Request) {
         http.Error(w, "Unable to parse request body", http.StatusBadRequest)
         return
     }
+
+	    // Set the ID and created time
+		newPost.ID = len(posts) + 1
+		newPost.CreatedAt = time.Now()
+	
+		// Save the new post
+		posts = append(posts, newPost)
+	
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(newPost)
+	}
