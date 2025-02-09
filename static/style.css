@@ -124,3 +124,9 @@ body {
     padding: 50px 0;
     background-color: #181818;
 }
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
