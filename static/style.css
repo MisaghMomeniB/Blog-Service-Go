@@ -4,3 +4,9 @@
     box-sizing: border-box;
     font-family: 'Vazirmatn', sans-serif;
 }
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
