@@ -26,23 +26,23 @@ func CreatePostHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-	var newPost model.Post
+    var newPost model.Post
     err := json.NewDecoder(r.Body).Decode(&newPost)
     if err != nil {
         http.Error(w, "Unable to parse request body", http.StatusBadRequest)
         return
     }
 
-	    // Set the ID and created time
-		newPost.ID = len(posts) + 1
-		newPost.CreatedAt = time.Now()
-	
-		// Save the new post
-		posts = append(posts, newPost)
-	
-		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(newPost)
-	}
+    // Set the ID and created time
+    newPost.ID = len(posts) + 1
+    newPost.CreatedAt = time.Now()
+
+    // Save the new post
+    posts = append(posts, newPost)
+
+    w.Header().Set("Content-Type", "application/json")
+    json.NewEncoder(w).Encode(newPost)
+}
 
 // DeletePostHandler handles deleting a blog post by ID
 func DeletePostHandler(w http.ResponseWriter, r *http.Request) {
@@ -73,9 +73,8 @@ func DeletePostHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-	    // Delete the post from the slice
-		posts = append(posts[:index], posts[index+1:]...)
+    // Delete the post from the slice
+    posts = append(posts[:index], posts[index+1:]...)
 
-		w.WriteHeader(http.StatusOK)
-	}
-	
+    w.WriteHeader(http.StatusOK)
+}
