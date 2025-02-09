@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-web-service/pkg/handler"
+	"blog-service-go/pkg/handler"
 	"log"
 	"net/http"
 )
