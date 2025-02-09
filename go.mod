@@ -1,4 +1,4 @@
-module example.com/myproject
+module Blog-Service-Go
 
 go 1.22.2
 
