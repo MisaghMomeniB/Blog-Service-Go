@@ -103,3 +103,14 @@ body {
     margin: 10px;
     font-size: 16px;
 }
+
+.read-more {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
