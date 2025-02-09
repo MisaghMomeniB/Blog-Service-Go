@@ -3,7 +3,7 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
-	"go-web-service/pkg/model"
+	"Blog-Service-Go/pkg/model"
 	"net/http"
 	"time"
 )
