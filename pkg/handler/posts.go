@@ -72,3 +72,10 @@ func DeletePostHandler(w http.ResponseWriter, r *http.Request) {
         http.Error(w, "Post not found", http.StatusNotFound)
         return
     }
+
+	    // Delete the post from the slice
+		posts = append(posts[:index], posts[index+1:]...)
+
+		w.WriteHeader(http.StatusOK)
+	}
+	
