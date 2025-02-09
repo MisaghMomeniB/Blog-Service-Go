@@ -43,3 +43,32 @@ func CreatePostHandler(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(newPost)
 	}
+
+// DeletePostHandler handles deleting a blog post by ID
+func DeletePostHandler(w http.ResponseWriter, r *http.Request) {
+    if r.Method != http.MethodDelete {
+        http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+        return
+    }
+
+    id := r.URL.Query().Get("id")
+    if id == "" {
+        http.Error(w, "Missing post ID", http.StatusBadRequest)
+        return
+    }
+
+    var postID int
+    fmt.Sscanf(id, "%d", &postID)
+
+    var index = -1
+    for i, post := range posts {
+        if post.ID == postID {
+            index = i
+            break
+        }
+    }
+
+    if index == -1 {
+        http.Error(w, "Post not found", http.StatusNotFound)
+        return
+    }
