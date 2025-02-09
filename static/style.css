@@ -16,3 +16,9 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
+/* Navbar Styles */
+.navbar {
+    background-color: #1e1e1e;
+    padding: 10px 0;
+}
