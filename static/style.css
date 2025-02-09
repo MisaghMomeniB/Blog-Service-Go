@@ -118,3 +118,9 @@ body {
 .read-more:hover {
     background-color: #ff5252;
 }
+
+/* About Section */
+.about-section {
+    padding: 50px 0;
+    background-color: #181818;
+}
